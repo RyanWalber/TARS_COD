@@ -11,14 +11,16 @@ class Estrategia {
 
     void executar();
 
+    void SeguirLinha();
+
   private:
 
     void LigarMotores();
 
-    void seguirlinha();
-
     
 
+    
+    Motores motores;
     SensorLinha sensoresLinha;
     
 };

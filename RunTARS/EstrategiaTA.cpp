@@ -1,21 +1,19 @@
 #include "EstrategiaTA.h"
 
-void Estrategia:: seguirLinha(){
+void Estrategia::SeguirLinha(){
 
-  sensoresLinha.recolherValoresSensorLinha();
+  sensoresLinha.recolherMedidasSensorLinha();
 
   if(sensoresLinha.frente()){
-    motores.paraFrent();
+    motores.ParaFRENTE();
+
   }
   else if(sensoresLinha.direita()){
-    motores.paraDireita();
-    delay(100);
+    motores.ParaDIREITA();
+    delay(200);
   }
   else if(sensoresLinha.esquerda()){
-    motores.paraEsquerda();
-    delay(100);
-  }
-  else if (sensoresLinha.pppp()){
-    motores.paraFrent();
+    motores.ParaESQUERDA();
+    delay(200);
   }
 }
